@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('build docker image') {
             steps {
-                bat 'docker build -t hello_world .'
+                bat 'docker build -t hello-world-apache .'
             }
         }
         stage('run container') {
             steps {
-                bat 'docker run -p 81:80 -td --name="hello_world1" hello_world'
+                bat 'docker run -p 81:80 -td --name="hello-world-apache-1" hello-world-apache'
             }
         }
     }
